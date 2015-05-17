@@ -10,7 +10,7 @@ if (mysqli_connect_errno())
   
 	$name = $_POST['name'];
     $company = $_POST['company'];
-    $dealer = $_POST['dealer'];
+    $dealer = $_POST['with'];
     $reason = $_POST['reason'];
 
 
@@ -19,10 +19,13 @@ if (mysqli_connect_errno())
 
 if ($connection->query($sql)) {
 		$id = $connection->insert_id;
-		echo "<script>alert('Take a selfie to complete the registration');window.location='../vispanel.php?id=$id';</script>";
+    $arr = array('status' => 'success','user_id' => $id);
+     echo json_encode($arr);
+		// echo "<script>alert('Take a selfie to complete the registration');window.location='../vispanel.php?id=$id';</script>";
     
 } else {
-		echo "<script>alert('Something wrong');window.location='../vislogin.php';</script>";
+		$arr = array('status' => 'failed');
+     echo json_encode($arr);
 }
 
 $connection->close();
