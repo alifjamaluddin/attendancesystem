@@ -14,7 +14,7 @@ $id=$_GET['id'];
 
 
 
-$sql="DELETE FROM Checkin WHERE id=$id";
+$sql="DELETE FROM CheckIn WHERE id=$id";
 // echo $sql;
 // echo $sql1;
 
