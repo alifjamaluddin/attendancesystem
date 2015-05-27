@@ -93,7 +93,7 @@ $result = $connection->query($sql);
                 echo '  </div>
                             </div>
                         </div>
-                        <a href="#">
+                        
                                 <div class="col-xs-12 text-center">
                                 <br>';
                                  
@@ -104,10 +104,13 @@ $result = $connection->query($sql);
                 For : '.$row["reason"].' <br>
                 '.$row["timestamp"].'
                 </span>
-
+                <a href="process/delete_visitor.php?id='.$row['id'].'" class="btn btn-danger">Delete</a>
                                 <div class="clearfix"></div>
+
                             </div>
-                        </a>
+                     
+                        
+
                     </div>
                 </div>';
 

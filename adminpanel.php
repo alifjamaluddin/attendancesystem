@@ -89,9 +89,11 @@ $result = $connection->query($sql);
                                  
                 echo '<img src="uploads/'.$row['picture_url'].'" style="height:100px;width:auto;"><br>';
                 echo ' <span class="pull-center"><a href="profile.php?id='.$id.'">View Detail</a></span>
-                                <div class="clearfix"></div>
-                            </div>
                         </a>
+                        <a href="process/delete_worker.php?id='.$row['id'].'" class="btn btn-danger">Delete</a>
+                                <div class="clearfix"></div>
+
+                            </div>
                     </div>
                 </div>';
                
