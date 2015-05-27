@@ -13,6 +13,7 @@
 </head>
 <body style="background-color: rgb(111, 84, 153);">
 <div id="container" class="container">
+<h2>IN PROGRESS</h2>
         <h1>SISTEM KEHADIRAN PEKERJA</h1>
         <h2>IN PROGRESS</h2>
 		<div id="main">
@@ -23,5 +24,3 @@
 </div>
 </body>
 </html>
-
-

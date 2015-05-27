@@ -31,7 +31,7 @@ try {
 
     // echo "The file " . basename($_FILES['image']['name']) .
     // " has been uploaded";
-     $sql = "INSERT INTO Checkin(user_id,picture_url) VALUES('$user_id','$file_name')";
+     $sql = "INSERT INTO CheckIn(user_id,picture_url) VALUES('$user_id','$file_name')";
 			if ($connection->query($sql)) {
 				$arr = array('status' => 'success');
   	 			echo json_encode($arr);

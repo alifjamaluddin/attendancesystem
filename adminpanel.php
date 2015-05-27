@@ -9,7 +9,7 @@ if (mysqli_connect_errno())
   }
   
 // $sql="SELECT * FROM Checkin";
-$sql="SELECT c.picture_url, c.time, p.fullname, c.user_id FROM Checkin c JOIN Profile p ON (c.user_id = p.user_id) WHERE time >= curdate()";
+$sql="SELECT c.picture_url, c.time, p.fullname, c.user_id FROM CheckIn c JOIN Profile p ON (c.user_id = p.user_id) WHERE time >= curdate()";
 
 
 $result = $connection->query($sql);
@@ -87,7 +87,7 @@ $result = $connection->query($sql);
                                 <div class="col-xs-12 text-center">
                                 <br>';
                                  
-                echo '<img src="uploads/'.$row['picture_url'].'" style="height:100px;width:auto;"><br>';
+                echo '<img src="uploads/'.$row['picture_url'].'jpg" style="height:100px;width:auto;"><br>';
                 echo ' <span class="pull-center"><a href="profile.php?id='.$id.'">View Detail</a></span>
                         </a>
                         <a href="process/delete_worker.php?id='.$row['id'].'" class="btn btn-danger">Delete</a>

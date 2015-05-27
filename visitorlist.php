@@ -79,7 +79,7 @@ $result = $connection->query($sql);
                 if ($result->num_rows > 0) {
                 while($row = mysqli_fetch_assoc($result)) {
                 $format = 'Y-m-d H:i:s';
-                $date = DateTime::createFromFormat($format, '2015-05-27 09:57:59');
+                $date = DateTime::createFromFormat($format, $row['timestamp']);
                 $pic =  "IMG_" . $date->format('Ymd_His') . ".jpg";
 
                 echo    '<div class="col-lg-2 col-md-2">
@@ -102,7 +102,6 @@ $result = $connection->query($sql);
                 Company : '.$row["company"].' <br>
                 Meet : '.$row["dealer"].' <br>
                 For : '.$row["reason"].' <br>
-                '.$row["timestamp"].'
                 </span>
                 <a href="process/delete_visitor.php?id='.$row['id'].'" class="btn btn-danger">Delete</a>
                                 <div class="clearfix"></div>
