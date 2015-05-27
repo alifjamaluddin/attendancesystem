@@ -66,7 +66,7 @@ if ($uploadOk == 0) {
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
 
-    	 $sql = "INSERT INTO Checkin(user_id,picture_url) VALUES('$user_id','$newfilename')";
+    	 $sql = "INSERT INTO CheckIn(user_id,picture_url) VALUES('$user_id','$newfilename')";
 			if ($connection->query($sql)) {
 		  		echo "<script>alert('You have been checked in');window.location='../index.php';</script>";
 			} else {

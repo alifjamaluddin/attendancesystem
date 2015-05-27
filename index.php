@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -14,6 +14,7 @@
 <body style="background-color: rgb(111, 84, 153);">
 <div id="container" class="container">
         <h1>SISTEM KEHADIRAN PEKERJA</h1>
+        <h2>IN PROGRESS</h2>
 		<div id="main">
 			<a href="adminlogin.php" class="btn btn-warning">Administrator</a>
 			<a href="vislogin.php" class="btn btn-warning">Visitor</a>
@@ -21,7 +22,6 @@
 		</div>
 </div>
 </body>
-</html> -->
+</html>
 
 
-<h2>IN PROGRESS</h2>
