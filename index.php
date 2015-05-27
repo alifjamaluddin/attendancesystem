@@ -15,6 +15,7 @@
 <div id="container" class="container">
 <h2>IN PROGRESS</h2>
         <h1>SISTEM KEHADIRAN PEKERJA</h1>
+        <h2>IN PROGRESS</h2>
 		<div id="main">
 			<a href="adminlogin.php" class="btn btn-warning">Administrator</a>
 			<a href="vislogin.php" class="btn btn-warning">Visitor</a>
@@ -23,6 +24,3 @@
 </div>
 </body>
 </html>
-
-
-

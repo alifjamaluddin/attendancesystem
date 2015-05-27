@@ -78,6 +78,10 @@ $result = $connection->query($sql);
   <?php
                 if ($result->num_rows > 0) {
                 while($row = mysqli_fetch_assoc($result)) {
+                $format = 'Y-m-d H:i:s';
+                $date = DateTime::createFromFormat($format, '2015-05-27 09:57:59');
+                $pic =  "IMG_" . $date->format('Ymd_His') . ".jpg";
+
                 echo    '<div class="col-lg-2 col-md-2">
                     <div class="panel panel-success">
                         <div class="panel-heading">
@@ -93,11 +97,12 @@ $result = $connection->query($sql);
                                 <div class="col-xs-12 text-center">
                                 <br>';
                                  
-                echo '<img src="uploads/'.$row['picture_url'].'" style="height:100px;width:auto;"><br>';
+                echo '<img src="uploads/'.$pic.'" style="height:100px;width:auto;"><br>';
                 echo ' <span class="pull-center">
                 Company : '.$row["company"].' <br>
                 Meet : '.$row["dealer"].' <br>
                 For : '.$row["reason"].' <br>
+                '.$row["timestamp"].'
                 </span>
 
                                 <div class="clearfix"></div>
@@ -105,6 +110,7 @@ $result = $connection->query($sql);
                         </a>
                     </div>
                 </div>';
+
                
                     }
                 }else{
