@@ -88,7 +88,7 @@ $result = $connection->query($sql);
                                 <br>';
                                  
                 echo '<img src="uploads/'.$row['picture_url'].'jpg" style="height:100px;width:auto;"><br>';
-                echo ' <span class="pull-center"><a href="profile.php?id='.$id.'">View Detail</a></span>
+                echo ' <span class="pull-center"><a href="profile.php?id='.$id.'" class="btn btn-primary">View Detail</a></span>
                         </a>
                         <a href="process/delete_worker.php?id='.$row['id'].'" class="btn btn-danger">Delete</a>
                                 <div class="clearfix"></div>
