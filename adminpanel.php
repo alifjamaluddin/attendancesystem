@@ -9,7 +9,7 @@ if (mysqli_connect_errno())
   }
   
 // $sql="SELECT * FROM Checkin";
-$sql="SELECT c.picture_url, c.time, p.fullname, c.user_id FROM CheckIn c JOIN Profile p ON (c.user_id = p.user_id) WHERE time >= curdate()";
+$sql="SELECT c.id, c.picture_url, c.time, p.fullname, c.user_id FROM CheckIn c JOIN Profile p ON (c.user_id = p.user_id) WHERE time >= curdate()";
 
 
 $result = $connection->query($sql);
